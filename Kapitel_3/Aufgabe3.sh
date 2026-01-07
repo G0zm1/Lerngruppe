@@ -13,7 +13,6 @@ path="$1"
 number="$2"
 
 if [ -d "$path" ]; then
-  echo "in "$1" were "$2" delete."
 
   ls -1 "$path" | head -n "$number" | while read file; do
     rm "$path/$file"
