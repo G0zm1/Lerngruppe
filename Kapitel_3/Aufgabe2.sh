@@ -13,16 +13,16 @@ fi
 
 for file in "$@"; do
   if [ -f "$file" ]; then
-    if ./myquestion "delete "$file"? "; then
+    if ./myquestion.sh "delete $file? "; then
       rm "$file"
 
     else
-      echo " "$file" was not deleted."
+      echo "$file was not deleted."
       
     fi
 
   else 
-    echo " "$file" dont exist."
+    echo "$file dont exist."
 
   fi
 done
